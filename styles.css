@@ -1,0 +1,362 @@
+body {
+  margin: 0;
+  padding: 0%;
+  background-color: #1e1e1e;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: auto;
+  font-family: 'Playwrite', cursive;
+
+}
+
+html {
+  margin: 0;
+  padding: 0%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.circles {
+  position: absolute;
+  border: 2px solid red;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.circle1 {
+  width: 120px;
+  height: 120px;
+  top: -40px;
+  left: 20px;
+}
+
+.circle2 {
+  width: 80px;
+  height: 80px;
+  top: 30px;
+  left: 90px;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  top: -30px;
+  right: 150px;
+}
+
+.circle4 {
+  width: 160px;
+  height: 160px;
+  top: 60px;
+  right: 50px;
+}
+
+.circle5 {
+  width: 140px;
+  height: 140px;
+  bottom: -70px;
+  left: 300px;
+}
+
+.circle6 {
+  width: 200px;
+  height: 200px;
+  bottom: -90px;
+  left: 350px;
+}
+
+.circle7 {
+  width: 200px;
+  height: 200px;
+  top: 200px;
+  left: 300px
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding: 20px;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+
+.logo-container {
+  flex: 1;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: auto;
+  left: 0;
+  top: 0;
+}
+
+.logo p {
+  color: white;
+  text-align: center;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.join {
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding-top: 0%;
+  color: white;
+}
+
+.love {
+  font-size: 32px;
+  color: #ffffff;
+  font-family: 'Playwrite', cursive;
+  font-weight: bold;
+}
+
+.heart {
+  position: absolute;
+  font-size: 70px;
+  top: 30%;
+  transform: translateX(-50%);
+  color: red;
+  animation: spin 25s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+
+.left-heart {
+  left: -45px;
+}
+
+.right-heart {
+  right: -50px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  margin: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input {
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+input::placeholder {
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+form .terms {
+  color: rgb(87, 87, 165);
+  font-size: 10px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  background-color: rgb(190, 21, 120);
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(206, 26, 26);
+  transform: scale(1.08);
+}
+
+.login {
+  padding-top: 5px;
+  font-size: 10px;
+  color: rgb(141, 135, 135);
+}
+
+.login a {
+  font-size: 15px;
+  padding-left: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  transition: transform 0.3s ease;
+}
+
+.login a:hover {
+  color: white;
+}
+
+.social img {
+  width: 25px;
+  height: 25px;
+  padding-right: 30px;
+  padding-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .heart {
+    position: absolute;
+    font-size: 60px;
+    top: 20%;
+    transform: translateX(-50%);
+    color: red;
+    animation: spin 25s infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotatey(360deg);
+    }
+  }
+
+
+  .left-heart {
+    left: -40px;
+  }
+
+  .right-heart {
+    right: -45px;
+  }
+
+  .circles {
+    position: absolute;
+    border: 2px solid red;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  .circle1 {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 20px;
+  }
+
+  .circle2 {
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    left: 70px;
+  }
+
+  .circle3 {
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    right: 80px;
+  }
+
+  .circle4 {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    right: 40px;
+  }
+
+  .circle5 {
+    width: 100px;
+    height: 100px;
+    bottom: -40px;
+    left: 250px;
+  }
+
+  .circle6 {
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    left: 300px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    width: 200px;
+    height: 280px;
+    left: 0;
+    top: 0;
+  }
+
+  form {
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+  }
+
+}
